@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">TestBankMandiri</string>
+
+    <string name="label_genre_movie">Genre Movie</string>
+    <string name="label_data_not_found">Data Not Found</string>
+    <string name="label_reload">Reload</string>
+    <string name="label_movie">Movie</string>
+    <string name="label_retry">Retry</string>
+    <string name="label_written_by">By %s</string>
+    <string name="label_written_at">Written on %s</string>
+    <string name="label_reviews">Reviews</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_show_year">(%s)</string>
+    <string name="label_videos">Videos</string>
+    <string name="label_all_review">All Review ></string>
+    <string name="label_review_movie">Review %s</string>
+    <string name="label_image_backdrop">Image Backdrop</string>
+    <string name="label_show_date_genre_longtime">%1s - %2s - %3s</string>
+    <string name="label_movie_name">Movie %s</string>
+    <string name="label_review">Review</string>
+    <string name="label_image_not_found">Image Not Found</string>
+
+
 </resources>
