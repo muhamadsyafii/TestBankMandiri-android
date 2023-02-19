@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.138" />
+        <entry key="app/src/main/res/drawable/black_transparent.xml" value="0.335" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back_white.xml" value="0.2765" />
+        <entry key="app/src/main/res/drawable/ic_empty.xml" value="0.2765" />
+        <entry key="app/src/main/res/drawable/ic_refresh.xml" value="0.2765" />
+        <entry key="app/src/main/res/drawable/ic_start.xml" value="0.2765" />
+        <entry key="app/src/main/res/drawable/lime_rounded.xml" value="0.206" />
+        <entry key="app/src/main/res/layout/activity_detail_movie.xml" value="0.3145833333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32864583333333336" />
+        <entry key="app/src/main/res/layout/activity_movie.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_review.xml" value="0.3145833333333333" />
+        <entry key="app/src/main/res/layout/item_detail_review.xml" value="0.625" />
+        <entry key="app/src/main/res/layout/item_genre.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_movie.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_review_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_video.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/layout_empty.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/view_footer_loading.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/view_header_detail.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/view_review_detail.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/view_videos_detail.xml" value="0.32760416666666664" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

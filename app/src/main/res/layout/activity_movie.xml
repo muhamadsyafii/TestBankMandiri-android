@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Muhamad Syafii
+  ~ Sunday, 19/2/2023
+  ~ Test Technical Assessment
+  ~ Copyright (c) 2023.
+  ~ All Rights Reserved
+  -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.MainActivity">
+    tools:context=".ui.movie.MovieActivity">
 
     <RelativeLayout
-        android:id="@+id/rl_toolbar"
+        android:id="@+id/rl_movie"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -15,42 +22,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/label_gender"
-            style="@style/TextAppearance.AppCompat.Large"
+        <ImageView
+            android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textStyle="bold"
-            android:text="@string/label_genre_movie"
-            android:textColor="@color/white" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back_white" />
 
+        <TextView
+            android:id="@+id/tv_title_movie"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/label_movie"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/lime_rounded"
-        android:submitBackground="@drawable/lime_rounded"
-        app:layout_constraintTop_toBottomOf="@id/rl_toolbar" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_genre"
+        android:id="@+id/rv_movie"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="8dp"
-        android:clipToPadding="false"
         android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingVertical="28dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:layout_constraintTop_toBottomOf="@id/rl_movie"
+        app:layout_constraintVertical_bias="1.0"
         app:spanCount="2"
         tools:layout_editor_absoluteX="0dp"
-        tools:listitem="@layout/item_genre" />
+        tools:listitem="@layout/item_movie" />
 
     <include
         android:id="@+id/layout_empty"
@@ -59,20 +72,20 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rl_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:indeterminate="true"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_movie"
         tools:visibility="visible" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

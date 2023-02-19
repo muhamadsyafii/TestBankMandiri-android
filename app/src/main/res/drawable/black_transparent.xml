@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Muhamad Syafii
+  ~ Sunday, 19/2/2023
+  ~ Test Technical Assessment
+  ~ Copyright (c) 2023.
+  ~ All Rights Reserved
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="90"
+        android:startColor="@color/black_trans" />
+</shape>

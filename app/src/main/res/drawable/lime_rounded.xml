@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Muhamad Syafii
+  ~ Sunday, 19/2/2023
+  ~ Test Technical Assessment
+  ~ Copyright (c) 2023.
+  ~ All Rights Reserved
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/lime_700_trans" />
+    <corners android:radius="25dp" />
+</shape>
