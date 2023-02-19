@@ -11,6 +11,7 @@
     <!--Custom Color-->
     <color name="background">#0D0F1C</color>
     <color name="lime_700">#C0CA33</color>
+    <color name="lime_700_a">#7D8311</color>
     <color name="lime_700_trans">#CCAFB42B</color>
     <color name="green_500">#4CAF50</color>
     <color name="purple_200_trans">#99BB86FC</color>

@@ -7,17 +7,22 @@ package com.syafii.testbankmandiri.ui.home
  * All Rights Reserved
  */
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
+import com.google.gson.Gson
+import com.syafii.testbankmandiri.R
 import com.syafii.testbankmandiri.databinding.ActivityMainBinding
 import com.syafii.testbankmandiri.domain.model.GenreModel
 import com.syafii.testbankmandiri.ui.home.adapter.GenreAdapter
+import com.syafii.testbankmandiri.ui.movie.MovieActivity
 import com.syafii.testbankmandiri.utils.StateUi
 import com.syafii.testbankmandiri.utils.hideKeyboard
+import com.syafii.testbankmandiri.utils.openActivity
 import com.syafii.testbankmandiri.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -68,6 +73,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         binding.run {
+            searchView.queryHint = resources.getString(R.string.hint_search)
             searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
                     return false
@@ -92,12 +98,6 @@ class MainActivity : AppCompatActivity() {
     private fun setData(genres: List<GenreModel.GenreItemModel>) {
         showEmptyLayout(genres.isEmpty())
         adapter.setData(genres)
-//        adapter.onClick = {
-//            val dataExtra = Gson().toJson(it)
-//            val intent = Intent(this, MovieActivity::class.java)
-//            intent.putExtra(MovieActivity.DATA_EXTRA_GENRE, dataExtra)
-//            startActivity(intent)
-//        }
         binding.rvGenre.adapter = adapter
     }
 
@@ -110,8 +110,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun handleOnItemClick(data: GenreModel.GenreItemModel) {
-
+        val intent = Intent(this, MovieActivity::class.java)
+            intent.putExtra(MovieActivity.DATA_EXTRA_GENRE, Gson().toJson(data))
+            startActivity(intent)
     }
-
 
 }

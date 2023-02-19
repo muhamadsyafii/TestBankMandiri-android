@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.syafii.testbankmandiri">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -15,8 +15,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.TestBankMandiri">
+        android:theme="@style/Theme.TestBankMandiri"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.review.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.DetailMovieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.movie.MovieActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.home.MainActivity"
             android:exported="true"
