@@ -14,6 +14,7 @@ This is project test for bank mandiri
 | * FItur Pencarian Genre |
 | * Fitur Loading State |
 | * Fitur Refresh ketika Error & Empty | 
+
 | Movie by GenreId | 
 | ------------- | 
 | * Fitur Menampilkan List Pagination Movie |
