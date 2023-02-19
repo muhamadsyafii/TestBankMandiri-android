@@ -19,6 +19,7 @@
     <string name="label_movie_name">Movie %s</string>
     <string name="label_review">Review</string>
     <string name="label_image_not_found">Image Not Found</string>
+    <string name="hint_search">Cari genre</string>
 
 
 </resources>
