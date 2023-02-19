@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.home.MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/label_gender"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:text="@string/label_genre_movie"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/lime_rounded"
+        android:queryBackground="@null"
+        android:submitBackground="@drawable/lime_rounded"
+        app:layout_constraintTop_toBottomOf="@id/rl_toolbar"
+        app:queryHint="Cari" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_genre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:spanCount="2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_genre" />
+
+    <include
+        android:id="@+id/layout_empty"
+        layout="@layout/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_toolbar"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:indeterminate="true"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
